@@ -1,0 +1,13 @@
+8.CREATE PROCEDURE Sp_EmployeeExist_1
+    @Email VARCHAR(100),
+    @Password varchar(20)
+AS
+BEGIN
+IF EXISTS(SELECT * FROM Employee WHERE Email = @Email AND Password = @Password)
+    SELECT 1 AS EmployeeExists
+ELSE
+    SELECT 0 AS EmployeeNotExists
+END 
+
+
+exec Sp_EmployeeExist_1 @Email='Dhrumil@gmail.com', @Password=123456

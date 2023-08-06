@@ -1,0 +1,217 @@
+﻿@model ModelLibrary.Models.ProspectModel
+
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+@*@using (Html.BeginForm("Details", "Prospect", FormMethod.Post, new { enctype = "multipart/form-data" }))*@
+
+@Html.HiddenFor(model => model.ProspectID)
+
+<div>
+    <dl class="dl-horizontal" style="border:solid">
+        <dd id="Save">
+            <textarea id="Comment" name="Comment" rows="8" cols="100" placeholder="Remark/Comment " style="position: absolute; right: 400px; width: 300px; padding: 10px; margin-top:20px"></textarea>
+            <div style="position: absolute; right: 340px; width: 350px; padding: 10px; margin-top:200px">
+                <select class="form-control " id="SelectType" name="SelectType">
+                    <option value="">--Select --</option>
+                    <option value="0">Reject</option>
+                    <option value="1">Scheduled Interview</option>
+                </select>
+            </div>
+            <div style="position: absolute;margin-left:380px; width: 160px; padding: 12px; margin-top:235px" id="select">
+                @Html.DropDownList("User", ViewBag.User as SelectList, "--Select--", new { @class = "form-control" })
+            </div>
+            <div style="position: absolute;margin-left:525px; width: 160px; padding: 12px; margin-top:235px">
+                @Html.Editor("Date", new { htmlAttributes = new { @class = "form-control " } })
+            </div>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mobile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @*@Html.DisplayFor(model => model.Gender)*@
+            @if (Model.Gender == true)
+            {
+                <label style="font-weight: normal">Male</label>
+            }
+            else
+            {
+                <label style="font-weight: normal">Female</label>
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Skill)
+        </dt>
+
+        <dd>
+            @*@Html.DisplayFor(model => model.Skill)*@
+            @foreach (var skill in ViewBag.Skill)
+            {
+                if (Model.Skill != null && Array.IndexOf(Model.Skill, @skill.SkillID) > -1)
+                {
+                    <label for="@skill.SkillID" style="font-weight: normal">
+                        @skill.Name
+                    </label>
+                }
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileName)
+        </dt>
+
+        <dd>
+            @{
+                string filepath = string.Empty;
+                var ext = Path.GetExtension(Model.FileName);
+                if (ext == ".jpg")
+                {
+                    filepath = "~/UploadedFiles/Icon/jpgIcon.png";
+                }
+                else if (ext == ".txt")
+                {
+                    filepath = "~/UploadedFiles/Icon/txtfileicon.png";
+                }
+                else if (ext == ".pdf")
+                {
+                    filepath = "~/UploadedFiles/Icon/pdfIcon.png";
+                }
+                else if (ext == ".xlsx")
+                {
+                    filepath = "~/UploadedFiles/Icon/excelicon.png";
+                }
+                else
+                {
+                    filepath = "~/UploadedFiles/Icon/nofileIcon.png";
+                }
+            }
+
+            <img src="@Url.Content(filepath)" height="50" width="50" /><br />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <div class="form-group col-md-offset-4" style="margin-top: 40px">
+            @*@Html.ActionLink("Back to List", "Index")*@
+            @Html.ActionLink("Back to List", "Index", "Prospect", new { @class = "btn btn-primary" })
+            <input type="submit" value="Save" class="btn btn-primary clsButton" />
+        </div>
+    </dl>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        debugger
+        var date = new Date();
+        date.setDate(date.getDate());
+
+        $("#Date").datepicker({
+           /* dateFormat: "dd-mm-yy",*/
+            startDate: date
+        });
+
+        $("#select").hide();
+        $("#Date").hide();
+
+        $('#SelectType').on("change", function () {
+            if (this.value == '1') {
+                $("#select").show();
+                $("#Date").show();
+            }
+            else {
+                $("#select").hide();
+                $("#Date").hide();
+            }
+        });
+
+        $(".clsButton").click(function (e) {
+            debugger
+
+            var companyResponseModel = {
+                Comments: $("#Comment").val(),
+                ScheduleDate: $("#Date").val(),
+                ProspectID:@Model.ProspectID,
+                Status:@Model.Status,
+                UserID: $("#User").val(),
+            }
+
+            $.ajax({
+                url: "/Prospect/Details",
+                type: "POST",
+                dataType: 'json',
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                data: companyResponseModel
+            });
+        });
+    });
+</script>

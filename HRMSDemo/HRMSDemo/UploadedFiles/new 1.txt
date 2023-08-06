@@ -1,0 +1,19 @@
+(from a in Prospects
+                  join from b in ProspectSkillMaping
+				   join from c in Skills
+                   on  a.ProspectID equals b.ProspectID
+				   on  b.SkillID equals c.SkillID
+                   select new UserAccountViewModel
+                   {
+                      FirstName = a.FirstName,
+                       MiddleName = a.MiddleName,
+					   LastName = a.LastName,
+					   DOB = a.DOB,
+					   Email = a.Email,
+					   Mobile = a.Mobile,
+					   Gender = a.Gender,
+					   Address = a.Address,
+					   FileName = a.FileName,
+					   Status = a.Status,
+					   Skill = c.Name
+                           }).ToList();

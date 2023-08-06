@@ -1,0 +1,21 @@
+ var httpPostedFile = Request.Files[0];
+                if (httpPostedFile != null)
+                {
+                    var uploadFilesDir = System.Web.HttpContext.Current.Server.MapPath("~/UploadedFiles");
+                    if (!Directory.Exists(uploadFilesDir))
+                    {
+                        Directory.CreateDirectory(uploadFilesDir);
+                    }
+
+                    var fileSavePath = Path.Combine(uploadFilesDir, httpPostedFile.FileName);
+                    httpPostedFile.SaveAs(fileSavePath);
+                }
+
+                return RedirectToAction("Index");
+                foreach (var files in file)
+                {
+                    if (files != null && files.ContentLength > 0)
+                    {
+                        files.SaveAs(HttpContext.Server.MapPath("~/UploadedFiles") + files.FileName);
+                    }
+                }

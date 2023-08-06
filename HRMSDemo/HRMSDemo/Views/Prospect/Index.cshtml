@@ -1,0 +1,101 @@
+﻿@model IEnumerable<ModelLibrary.Models.ProspectModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Prospect List</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+          
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in  Model)
+{
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.FirstName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MiddleName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LastName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DOB)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Mobile)
+    </td>
+    <td>
+        @*@Html.DisplayFor(modelItem => item.Gender)*@
+        @if (item.Gender == true)
+        {
+            <label style="font-weight: normal">Male</label>
+        }
+        else
+        {
+            <label style="font-weight: normal">Female</label>
+        }
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Address)
+    </td>
+   
+    <td>
+        @*@Html.DisplayFor(modelItem => item.Status)*@
+        @if (item.Status == 1)
+        {
+            <label style="font-weight: normal">Active</label>
+        }
+        else
+        {
+            <label style="font-weight: normal">Hold/Pending</label>
+        }
+    </td>
+    <td>
+        @*@Html.ActionLink("Edit", "Edit", new { id = item.ProspectID }) |*@
+        @Html.ActionLink("View", "Details", new { id = item.ProspectID }, new { @class = "btn btn-primary" }) 
+        @*@Html.ActionLink("Delete", "Delete", new { id = item.ProspectID })*@
+    </td>
+</tr>
+
+}
+</table>

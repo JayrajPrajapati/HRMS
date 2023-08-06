@@ -1,0 +1,62 @@
+
+
+
+
+<style>
+    .checkbox {
+        font-size: 18px;
+    }
+
+    .box {
+        width: 150px;
+    }
+</style>
+
+<div class='container my-5'>
+    <h2>Example2 - Select With Checkbox (Extra Feature)</h2>
+    <input type="checkbox" class="mb-3" id='checkall' /> Select All
+    <div>
+        <input type="checkbox" class='checkbox' name="languages" id="ex2-check1" />
+    </div>
+    <div>
+        <input type="checkbox" class='checkbox' name="languages" id="ex2-check2" />
+    </div>
+    <div>
+        <input type="checkbox" class='checkbox' name="languages" id="ex2-check3" />
+    </div>
+    <div>
+        <input type="checkbox" class='checkbox' name="languages" id="ex2-check4" />
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        // Select With Checkbox(Extra Feature)
+        $("#checkall").change(function () {
+            var checked = $(this).is(":checked");
+            if (checked) {
+                $(".checkbox").each(function () {
+                    $(this).prop("checked", true);
+                });
+            } else {
+                $(".checkbox").each(function () {
+                    $(this).prop("checked", false);
+                });
+            }
+        });
+
+        // Changing state of CheckAll checkbox
+        $(".checkbox").click(function () {
+            if ($(".checkbox").length == $(".checkbox:checked").length) {
+                $("#checkall").prop("checked", true);
+            } else {
+                // $("#checkall").removeAttr("checked");
+                $("#checkall").prop("checked", false);
+            }
+        });
+    });
+
+</script>
+
+

@@ -1,0 +1,63 @@
+SQL:
+Status: Done
+========================
+https://www.tutorialspoint.com/t_sql/
+https://www.w3schools.com/sql/default.asp
+
+
+
+C# - OOPS:
+Status: Done
+========================
+https://www.c-sharpcorner.com/UploadFile/mkagrahari/introduction-to-object-oriented-programming-concepts-in-C-Sharp/
+https://www.tutorialspoint.com/csharp/
+
+
+
+MVC:
+Status: Done
+========================
+https://www.tutorialspoint.com/asp.net_mvc/
+https://www.tutorialsteacher.com/mvc/asp.net-mvc-tutorials
+
+
+
+ADO.NET:
+Status: Done
+========================
+https://www.tutorialspoint.com/asp.net/asp.net_ado_net.htm
+https://dotnettutorials.net/course/ado-net-tutorial-for-beginners-and-professionals/
+
+
+
+LINQ:
+Status: Done
+========================
+https://www.tutorialsteacher.com/linq
+https://www.tutorialspoint.com/linq/index.htm
+
+
+
+Entity Framework:
+Status: Done
+========================
+https://www.entityframeworktutorial.net/what-is-entityframework.aspx
+https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx
+https://www.entityframeworktutorial.net/EntityFramework6/introduction.aspx
+
+
+
+Repository Pattern:
+Status: Pending
+========================
+https://www.c-sharpcorner.com/UploadFile/3d39b4/crud-using-the-repository-pattern-in-mvc/
+https://www.dotnetcurry.com/aspnet-mvc/1155/aspnet-mvc-repository-pattern-perform-database-operations
+https://www.tutlane.com/tutorial/aspnet-mvc/crud-operations-using-repository-pattern-in-asp-net-mvc-with-example
+
+
+
+jQuery:
+Status: Done
+========================
+https://www.tutorialspoint.com/jquery/
+https://www.tutorialrepublic.com/jquery-examples.php

@@ -1,0 +1,5 @@
+select e.FirstName,e.LastName,e.DOB,c.CityName,s.StateName
+from Employee as e 
+inner join City as c on e.CityFK = c.StateFK 
+inner join State as s on e.StateFK=s.id
+where e.Email='Dhrumil@gmail.com' and e.Password=123456

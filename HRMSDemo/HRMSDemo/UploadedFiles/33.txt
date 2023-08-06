@@ -1,0 +1,24 @@
+public ActionResult Edit(RegistrationModel registration, HttpPostedFileBase files)
+        {
+            if (ModelState.IsValid)
+            {
+                if(files != null)
+                {
+                    registration.ProfileImage = files.FileName;
+                }
+                _IRegistration.UpdateRegistration(registration);
+                
+                if (files != null)
+                {
+                    string path = Server.MapPath("~/Uploads/");
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                    }
+                    files.SaveAs(path + Path.GetFileName(files.FileName));
+                    registration.ProfileImage = files.FileName;
+                }
+                return RedirectToAction("Index");
+            }
+            return View();
+        }

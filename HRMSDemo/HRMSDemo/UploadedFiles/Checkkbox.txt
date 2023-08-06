@@ -1,0 +1,8 @@
+<div class="checkbox">
+                    Male
+                    @Html.RadioButtonFor(model => model.Gender, true)
+                    Female
+                    @Html.RadioButtonFor(Model => Model.Gender, false)
+                    @*@Html.EditorFor(model => model.Gender)*@
+                    @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+                </div>

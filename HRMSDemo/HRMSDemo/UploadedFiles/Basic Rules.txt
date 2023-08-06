@@ -1,0 +1,42 @@
+Project Structure
+-----------------
+1. Demo(Main project)
+
+2. Demo.Helpers
+	1. Common Function
+	2. DBHelper
+	3. Enums
+	4. Constant
+
+3. Demo.Models
+	1. Models(DB model)
+	2. ViewModels(Custome model)
+	
+4. Demo.Repositories
+	1. Repository
+	2. Services
+
+=======================================================
+
+Sortcut keys
+------------
+1. Code commenting
+	- For single method (Ctrl + Shift + D)
+	- For all method (Ctrl + A and Ctrl + Shift + D)
+	
+2. Add region
+	- for single Method (Wtire #region and press tab two time)
+	- For selected content (Select content and press Ctrl + K + C and select #region and press enter)
+	
+3. Try catch block
+	- for single method (Write #try and press tab tow time)
+	- For selected content (Select content and press Ctrl + K + C and select #try and press enter)
+	
+4. Remove unused reference form .cs file
+	- Press Ctrl + R +G
+	
+5. Set code structure
+	- Press Ctrl + K + D
+	
+	
+Note: - Must follow the code commenting, add region, try catch block, remove unused reference and coding structure while develop application.

@@ -1,0 +1,119 @@
+
+
+Today Log
+================
+Date: 30-06-2022
+Completed : LINQ (What is LINQ TO Concatenation Operator: Concat)
+Inprogress : - LINQ(Generation Operator: DefaultIfEmpty)
+Pending : - LINQ(Generation Operator: DefaultIfEmpty  TO intoKeywords)
+
+Today Log
+================
+Date: 7-06-2022
+Completed Task: jQuery (References , Plugins)
+Inprogress Task: -
+Pending Task: -
+
+Today Log
+================
+Date: 6-06-2022
+Completed Task: jQuery(Tutorial , DOM Manipulation , CSS Manipulation , Effects , Traversing ,UI)
+Inprogress Task: jQuery (References)
+Pending Task: jQuery (References , Plugins)
+
+Today Log
+================
+Date: 2-06-2022
+Completed Task: EF 6 Basics , EF DB First(Introduction to Delete Disconnected Entity)
+Inprogress Task: EF 6 DB First (Asynchronous Querying and Saving in EF 6 )
+Pending Task:  EF 6 DB First (Asynchronous Querying and Saving to Model-First Development ) ,EF 6 Code First
+
+Today Log
+================
+Date: 1-06-2022
+Completed Task: LINQ Tutorial
+Inprogress Task: -
+Pending Task:  -
+
+Today Log
+================
+Date: 31-05-2022
+Completed Task:  Introduction To ADO.NET() to ADO.NET(Connection Poolling)
+Inprogress Task: -
+Pending Task:  -
+
+Today Log
+================
+Date: 30-05-2022
+Completed Task:  MVC (Web API to Self-hosting)
+Inprogress Task:  MVC (Data Annotations)
+Pending Task:  MVC (Data Annotations)
+================
+Date: 27-05-2022
+Completed Task: MVC ( Data Model TO Razor )
+Inprogress Task: MVC Data Annotations
+Pending Task:  MVC (Data Annotations to Self-hosting)
+
+Today Log
+================
+Date: 26-05-2022
+Completed Task: MVC (Routing to View )
+Inprogress Task: MVC Data Model
+Pending Task:  MVC (Data Model to Self-hosting)
+ 
+Today Log
+================
+Date: 25-05-2022
+Completed Task: MVC Basic(Overview - folder Structure)
+Inprogress Task: MVC Routing
+Pending Task:  MVC Routing , MVC , Create HTML Control in MVC
+
+Today Log
+================
+Date: 24-05-2022
+Completed Task: SQl Reference (SQL server Function),Create Table(State,City,Employee,EmployeeLeave,Company,CompanyEmployee,AssignValue,EmployeeRole),Sql Queries(1,2,3,4,6,7,8)
+Inprogress Task: SQl Queries (9)
+Pending Task:  SQl Queries (9,10,11,12,5)
+
+Today Log
+================
+Date: 23-05-2022
+Completed Task: SQL Tutorial (SQl Stored Procedures - SQL  operator) ,  SQL database 
+Inprogress Task: SQl Reference (SQL server Function)
+Pending Task:  SQl Reference (SQL server Function)
+
+Today Log
+================
+Date: 20-05-2022
+Completed Task: SQL Tutorial (SQl Home - SQL Stored Procedures)
+Inprogress Task:SQl Comment
+Pending Task: SQl Comment , SQl Operator , SQL database , SQl Reference 
+
+Today Log
+================
+Date: 19-05-2022
+Completed Task: C# - classes , inheritance , polymorphism, operator overloading , interface , namespaces , preprocessor directives , regular expression, exception handling , file I/O
+Inprogress Task: C# - Attribute
+Pending Task: C# _ Attribute to Multithreading 
+
+Today Log
+================
+Date: 18-05-2022
+Completed Task:C#- Loops ,Encapsulation , Methods , Nullables, Array , String , Structure , Enum  
+Inprogress Task: c# - Classes
+Pending Task: C# - Inheritance to c# - File I/O , C# advanced Tutorial
+
+Today Log
+================
+Date: 17-05-2022
+Completed Task: C# - Home,Overview,environment,program structure,basic syntax,data type,type conversion,variable,constant,operater,decision making
+Inprogress Task:  c# - loops
+Pending Task: c# - Encapsulation to c# - File I/O , C# advanced Tutorial
+
+
+Today Log
+================
+Date: 16-05-2022
+Completed Task:  oops concept 
+Inprogress Task: c# tutorial 
+Pending Task: C# tutorial
